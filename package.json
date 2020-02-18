@@ -1,0 +1,19 @@
+{
+  "name": "artgropu-task",
+  "version": "1.0.0",
+  "description": "zadanie rekrutacyjne",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SztefkoKamil/ArtGroup-task.git"
+  },
+  "author": "Kamil Sztefko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SztefkoKamil/ArtGroup-task/issues"
+  },
+  "homepage": "https://github.com/SztefkoKamil/ArtGroup-task#readme"
+}
