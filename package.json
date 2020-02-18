@@ -4,7 +4,9 @@
   "description": "zadanie rekrutacyjne",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
