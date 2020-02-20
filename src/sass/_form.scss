@@ -1,6 +1,7 @@
+@import './variables';
 
 .form {
-  background: #F5F7FA;
+  background: $bgColor2;
   position: relative;
 }
 
@@ -8,7 +9,7 @@
   font-family: "Playfair Display";
   font-size: 27px;
   font-weight: 400;
-  color: #3E4555;
+  color: $fontColor1;
   line-height: 38px;
   text-align: center;
   margin: 100px 0;
@@ -22,24 +23,24 @@
   width: 270px;
   font-size: 40px;
   font-weight: 700;
-  color: #E2536B;
+  color: $fontColor2;
   background: transparent;
-  border: 4px solid #E2536B;
+  border: 4px solid $donate-btnBorderColor;
   border-radius: 5px;
   padding: 25px;
   margin: 0 0 30px;
   transition: color .1s linear, background-color .1s linear, border .1s linear; 
 
   &.form__donate-btn--active {
-    color: #fff;
-    background: #29AF8A;
-    border: 4px solid #29AF8A;
+    color: $fontColor3;
+    background: $donate-btnActiveColor;
+    border: 4px solid $donate-btnActiveColor;
   }
 
   &:hover {
-    color: #fff;
-    background: #29AF8A;
-    border: 4px solid #29AF8A;
+    color: $fontColor3;
+    background: $donate-btnActiveColor;
+    border: 4px solid $donate-btnActiveColor;
   }
 }
 
@@ -57,7 +58,8 @@
   width: 100%;
   font-size: 21px;
   line-height: 34px;
-  border: 2px solid #E0E6ED;
+  background: $inputBgColor;
+  border: 2px solid $inputBorderColor;
   border-radius: 5px;
   padding: 20px;
   padding-left: 60px;
@@ -86,8 +88,8 @@
   width: 35px;
   height: 35px;
   position: relative;
-  background: #fff;
-  border: 2px solid #E0E6ED;
+  background: $inputBgColor;
+  border: 2px solid $inputBorderColor;
   border-radius: 5px;
   padding: 2px;
 }
@@ -109,9 +111,9 @@
   height: 45px;
   font-size: 14px;
   font-weight: 700;
-  color: #fff;
+  color: $fontColor3;
   text-transform: uppercase;
-  background: #29AF8A;
+  background: $submitBgColor;
   border: none;
   border-radius: 5px;
   margin: 130px 0 70px;
