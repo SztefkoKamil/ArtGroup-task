@@ -1,0 +1,35 @@
+@import './variables';
+
+.footer {
+  padding: 40px 0 140px;
+}
+
+.footer__editions-list {
+  list-style-type: none;
+  padding: 20px 10vw 50px 0;
+}
+
+.footer__edition-link {
+  color: $mainFontColor;
+  cursor: pointer;
+
+  &:hover {
+    color: $fontColor1;
+    text-decoration: none;
+  }
+}
+
+.footer__social-link {
+  margin: 0 7px 50px;
+  cursor: pointer;
+}
+
+.footer__privacy-policy {
+  color: $mainFontColor;
+  cursor: pointer;
+
+  &:hover {
+    color: $fontColor1;
+    text-decoration: none;
+  }
+}

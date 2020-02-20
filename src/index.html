@@ -163,29 +163,35 @@
     </form>
   </section>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
 
       <div class="row">
         <div class="col-12">
-          <p>Poprzednie edycje:</p>
+          <p class="footer__previous-editions">Poprzednie edycje:</p>
         </div>
       </div>
 
       <div class="row">
         <div class="col-12 col-md-8">
-          <ul class="d-flex">
-            <li>Edycja pierwsza</li>
-            <li>Edycja druga</li>
-            <li>Edycja trzecia</li>
+          <ul class="footer__editions-list d-flex flex-wrap justify-content-between">
+            <li>
+              <a class="footer__edition-link" href="">Edycja pierwsza</a>
+            </li>
+            <li>
+              <a class="footer__edition-link" href="">Edycja druga</a>
+            </li>
+            <li>
+              <a class="footer__edition-link" href="">Edycja trzecia</a>
+            </li>
           </ul>
         </div>
         <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
-          <a href="">
-            <img src="https://via.placeholder.com/40x40" alt="">
+          <a class="footer__social-link" href="">
+            <img src="./assets/images/footer__facebook-icon.png" alt="facebook icon">
           </a>
-          <a href="">
-            <img src="https://via.placeholder.com/40x40" alt="">
+          <a class="footer__social-link" href="https://instagram.com">
+            <img src="./assets/images/footer__instagram-icon.png" alt="instagram icon">
           </a>
         </div>
       </div>
@@ -195,7 +201,7 @@
           <p>© 2019 nazwa firmy sp. z o.o. wszystkie prawa zastrzeżone</p>
         </div>
         <div class="col-12 col-md-4">
-          <p>Polityka prywatności</p>
+          <a class="footer__privacy-policy" href="">Polityka prywatności</a>
         </div>
       </div>
 

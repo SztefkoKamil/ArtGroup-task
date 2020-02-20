@@ -29,6 +29,7 @@
   border-radius: 5px;
   padding: 25px;
   margin: 0 0 30px;
+  cursor: pointer;
   transition: color .1s linear, background-color .1s linear, border .1s linear; 
 
   &.form__donate-btn--active {
@@ -92,6 +93,7 @@
   border: 2px solid $inputBorderColor;
   border-radius: 5px;
   padding: 2px;
+  cursor: pointer;
 }
 
 .form__checked-image {
@@ -117,6 +119,7 @@
   border: none;
   border-radius: 5px;
   margin: 130px 0 70px;
+  cursor: pointer;
 }
 
 .form__bg-image {
