@@ -89,7 +89,7 @@
 
   <section class="form">
     <img class="form__bg-image" src="./assets/images/form__bg-image.png" alt="">
-    <form class="container-fluid">
+    <form class="container-fluid" id="donate-form">
 
       <div class="row">
         <div class="col-12">
@@ -99,13 +99,13 @@
 
       <div class="row">
         <div class="form__donate-col col-12 col-md-4 d-flex justify-content-center">
-          <button class="form__donate-btn d-flex justify-content-center" type="button">50 zł</button>
+          <button data-amount="50" class="form__donate-btn form__donate-btn--active d-flex justify-content-center" type="button">50 zł</button>
         </div>
         <div class="form__donate-col col-12 col-md-4 d-flex justify-content-center">
-          <button class="form__donate-btn d-flex justify-content-center" type="button">70 zł</button>
+          <button data-amount="70" class="form__donate-btn d-flex justify-content-center" type="button">70 zł</button>
         </div>
         <div class="form__donate-col col-12 col-md-4 d-flex justify-content-center">
-          <button class="form__donate-btn d-flex justify-content-center" type="button">100 zł</button>
+          <button data-amount="100" class="form__donate-btn d-flex justify-content-center" type="button">100 zł</button>
         </div>
       </div>
 
@@ -123,14 +123,32 @@
 
             <div class="row">
               <div class="form__inputs-col col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end">
-                <input class="form__input" type="text" name="name" placeholder="imię nazwisko">
-                <input class="form__input" type="text" name="email" placeholder="adres e-mail">
-                <input class="form__input" type="text" name="phone" placeholder="telefon">
+                <div class="form__input-wrapper d-flex flex-column align-items-center">
+                  <input class="form__input" type="text" id="input-name" placeholder="imię nazwisko">
+                  <span class="form__input-error">Podaj imię i nazwisko</span>
+                </div>
+                <div class="form__input-wrapper d-flex flex-column align-items-center">
+                  <input class="form__input" type="email" id="input-email" placeholder="adres e-mail">
+                  <span class="form__input-error">Podaj poprawny email</span>
+                </div>
+                <div class="form__input-wrapper d-flex flex-column align-items-center">
+                  <input class="form__input" type="text" id="input-phone" placeholder="telefon">
+                  <span class="form__input-error">Podaj numer telefonu np. 123456789</span>
+                </div>
               </div>
               <div class="form__inputs-col col-12 col-md-6 d-flex flex-column align-items-center align-items-md-start">
-                <input class="form__input" type="text" name="street" placeholder="ulica">
-                <input class="form__input" type="text" name="city" placeholder="miasto">
-                <input class="form__input" type="text" name="zip" placeholder="kod pocztowy">
+                <div class="form__input-wrapper d-flex flex-column align-items-center">
+                   <input class="form__input" type="text" id="input-street" placeholder="ulica">
+                   <span class="form__input-error">Podaj ulicę i numer</span>
+               </div>
+                <div class="form__input-wrapper d-flex flex-column align-items-center">
+                  <input class="form__input" type="text" id="input-city" placeholder="miasto">
+                  <span class="form__input-error">Podaj miasto</span>
+                </div>
+                <div class="form__input-wrapper d-flex flex-column align-items-center">
+                  <input class="form__input" type="text" id="input-zip" placeholder="kod pocztowy">
+                  <span class="form__input-error">Podaj kod pocztowy</span>
+                </div>
               </div>
             </div>
 
@@ -140,13 +158,11 @@
                   <p class="form__code">Twój unikalny kod: #123456</p>
                 </div>
                 <div>
+                  <span class="form__input-error form__input-error--rodo">Zaakceptuj zgodę</span>
                   <label class="d-flex align-items-center">
-                    <div class="form__checkbox-wrapper">
-                      <input class="form__checkbox" type="checkbox" name="rodo" id="rodo-checkbox">
-                      <div class="form__fake-checkbox" id="fake-rodo-checkbox">
-                        <img src="./assets/images/form__checked-image.svg" alt="" class="form__checked-image form__checked-image--hidden">
-                      </div>
-                    </div>
+                    <button class="form__fake-checkbox" type="button" id="fake-rodo-checkbox">
+                      <img src="./assets/images/form__checked-image.svg" alt="" class="form__checked-image form__checked-image--hidden" id="fake-rodo-image">
+                    </button>
                     <span class="form__rodo-info">Wyrażam zgodę na przetwarzanie... Tekst RODO</span>
                   </label>
                 </div>

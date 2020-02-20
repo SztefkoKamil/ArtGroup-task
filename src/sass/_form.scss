@@ -55,6 +55,11 @@
   padding: 0 25px;
 }
 
+.form__input-wrapper {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
 .form__input {
   width: 100%;
   font-size: 21px;
@@ -64,25 +69,27 @@
   border-radius: 5px;
   padding: 20px;
   padding-left: 60px;
-  margin-bottom: 30px;
+}
+
+.form__input-error {
+  display: none;
+  color: red;
+  font-size: 14px;
+  margin: 2px 0 0;
+
+  &.form__input-error--rodo {
+    margin: 0 0 3px 15px;
+  }
+
+  &.form__input-error--visible {
+    display: block;
+  }
 }
 
 .form__code {
   font-size: 24px;
   text-align: center;
   margin: 35px 0 55px;;
-}
-
-.form__checkbox-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 0 45px 0 0;
-}
-
-.form__checkbox {
-  position: absolute;
-  left: 10px;
-  top: 10px
 }
 
 .form__fake-checkbox {
@@ -93,7 +100,12 @@
   border: 2px solid $inputBorderColor;
   border-radius: 5px;
   padding: 2px;
+  margin: 0 45px 0 10px;
   cursor: pointer;
+}
+
+.form__input--invalid {
+  border: 2px solid red;
 }
 
 .form__checked-image {
