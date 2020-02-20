@@ -1,0 +1,46 @@
+
+.how-to-help {
+  background: #F5F7FA;
+  padding: 65px 5vw;
+}
+
+.how-to-help__title-row {
+  padding: 0 0 40px;
+}
+
+.how-to-help__title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 700;
+  color: #3E4555;
+  line-height: 43px;
+  text-align: center;
+}
+
+.how-to-help__number-wrapper {
+  width: 88px;
+  height: 88px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+  margin: 50px auto 32px;
+}
+
+.how-to-help__number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #E2536B;
+}
+
+.how-to-help__description {
+  color: #8D97AD;
+  line-height: 26px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+  .how-to-help__description {
+    padding: 0 10vw;
+  }
+}
