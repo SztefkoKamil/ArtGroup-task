@@ -1,0 +1,70 @@
+
+.header {
+  min-height: 100vh;
+  padding: 70px 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.header__bg-image {
+  width: 450px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.header__title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 700;
+  color: #3E4555;
+  text-align: center;
+  padding: 0 10vw;
+  margin-bottom: 10vw;;
+}
+
+.header__content-row {
+  padding: 0 8vw;
+
+  &:last-child {
+    padding-right: 16vw;
+    
+
+  }
+}
+
+.header__subtitle-1 {
+  color: #8D97AD;
+  line-height: 26px;
+  margin-bottom: 50px;;
+}
+
+.header__subtitle-2 {
+  font-family: "Playfair Display";
+  font-size: 27px;
+  line-height: 38px;
+  color: #3E4555;
+}
+
+.header__green-image {
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+}
+
+.header__image {
+  width: 30vw;
+  position: relative;
+}
+
+
+@media (max-width: 991px) {
+  .header__content-row:last-child {
+    margin-top: 20vw;
+  }
+
+  .header__image {
+    width: 50vw;
+  }
+}
