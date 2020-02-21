@@ -1,5 +1,7 @@
 'use strict';
 
+if (!Array.from) Array.from = object => [].slice.call(object);
+
 const donateBtns = Array.from(document.querySelectorAll('.form__donate-btn')),
       donateForm = document.querySelector('#donate-form'),
       inputName = document.querySelector('#input-name'),
