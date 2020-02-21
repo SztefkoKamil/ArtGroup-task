@@ -4,6 +4,7 @@ if (!Array.from) Array.from = object => [].slice.call(object);
 
 const donateBtns = Array.from(document.querySelectorAll('.form__donate-btn')),
       donateForm = document.querySelector('#donate-form'),
+      formInputs = Array.from(document.querySelectorAll('.form__input')),
       inputName = document.querySelector('#input-name'),
       inputEmail = document.querySelector('#input-email'),
       inputPhone = document.querySelector('#input-phone'),
@@ -126,6 +127,7 @@ function checkDonateForm(e) {
 const activeFormListeners = () => {
   donateBtns.map(btn => btn.addEventListener('click', activeDonateBtn) );
   fakeRodoCheckbox.addEventListener('click', toggleRodoCheckbox);
+  formInputs.map(input => input.addEventListener('blur', checkInputs));
   donateForm.addEventListener('submit', checkDonateForm);
 };
 
