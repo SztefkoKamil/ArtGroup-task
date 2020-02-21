@@ -5,6 +5,12 @@
   position: relative;
 }
 
+.form__bg-image {
+  position: absolute;
+  bottom: 0;
+  left: 8vw;;
+}
+
 .form__title {
   font-family: "Playfair Display";
   font-size: 27px;
@@ -57,7 +63,7 @@
 
 .form__input-wrapper {
   width: 100%;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
 }
 
 .form__input {
@@ -67,13 +73,12 @@
   background: $inputBgColor;
   border: 2px solid $inputBorderColor;
   border-radius: 5px;
-  padding: 20px;
-  padding-left: 60px;
+  padding: 20px 20px 20px 60px;
 }
 
 .form__input-error {
   display: none;
-  color: red;
+  color: $inputErrorColor;
   font-size: 14px;
   margin: 2px 0 0;
 
@@ -94,7 +99,10 @@
 
 .form__fake-checkbox {
   width: 35px;
+  min-width: 35px;
   height: 35px;
+  min-height: 35px;
+  line-height: 100%;;
   position: relative;
   background: $inputBgColor;
   border: 2px solid $inputBorderColor;
@@ -105,7 +113,7 @@
 }
 
 .form__input--invalid {
-  border: 2px solid red;
+  border: 2px solid $inputErrorColor;
 }
 
 .form__checked-image {
@@ -134,14 +142,18 @@
   cursor: pointer;
 }
 
-.form__bg-image {
-  position: absolute;
-  bottom: 0;
-  left: 8vw;;
-}
-
 @media (max-width: 1199px) {
   .form__donate-col {
     padding: 0 30px;
   }
 }
+
+@media (max-width: 600px) {
+  .form__bg-image {
+    width: 60vw;
+  }
+}
+
+
+
+

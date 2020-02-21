@@ -22,7 +22,7 @@
   color: $fontColor1;
   text-align: center;
   padding: 0 10vw;
-  margin-bottom: 10vw;
+  margin: 0 0 10vw;
 }
 
 .header__content-row {
@@ -38,7 +38,7 @@
 .header__subtitle-1 {
   color: $mainFontColor;
   line-height: 26px;
-  margin-bottom: 50px;
+  margin: 0 0 50px;
 }
 
 .header__subtitle-2 {
@@ -63,7 +63,7 @@
 
 @media (max-width: 991px) {
   .header__content-row:last-child {
-    margin-top: 20vw;
+    margin: 20vw 0 0;
   }
 
   .header__image {
@@ -73,7 +73,7 @@
 
 @media (max-width: 600px) {
   .header {
-    padding-top: 60px;
+    padding: 60px 0 70px;
   }
 
   .header__bg-image {
