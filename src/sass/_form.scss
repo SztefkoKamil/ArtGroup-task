@@ -3,6 +3,7 @@
 .form {
   background: $bgColor2;
   position: relative;
+  padding: 80px 15px 50px;
 }
 
 .form__bg-image {
@@ -18,7 +19,7 @@
   color: $fontColor1;
   line-height: 38px;
   text-align: center;
-  margin: 100px 0;
+  margin: 20px 0 100px;
 }
 
 .form__donate-col {
@@ -54,7 +55,7 @@
 .form__donate-info {
   text-align: center;
   margin: 60px 0 0;
-  padding: 0 50px 0;
+  padding: 0 50px 80px;
 }
 
 .form__inputs-col {
@@ -138,8 +139,23 @@
   background: $submitBgColor;
   border: none;
   border-radius: 5px;
-  margin: 130px 0 70px;
+  margin: 130px 0 20px;
   cursor: pointer;
+}
+
+.form__feedback {
+  display: none;
+  margin: 50px 0;
+  font-size: 20px;
+
+  &.form__feedback--success {
+    display: inline;
+    color: $feedbackSuccessColor;
+  }
+  &.form__feedback--error {
+    display: inline;
+    color: $inputErrorColor;
+  }
 }
 
 @media (max-width: 1199px) {

@@ -12,7 +12,8 @@ const donateBtns = Array.from(document.querySelectorAll('.form__donate-btn')),
       inputCity = document.querySelector('#input-city'),
       inputZip = document.querySelector('#input-zip'),
       fakeRodoCheckbox = document.querySelector('#fake-rodo-checkbox'),
-      fakeRodoImage = document.querySelector('#fake-rodo-image');
+      fakeRodoImage = document.querySelector('#fake-rodo-image'),
+      formFeedback = document.querySelector('#form-feedback');
 
 let donateAmount = 50,
     rodoAccepted = false;
@@ -104,6 +105,33 @@ function checkInputs() {
   return validation;
 };
 
+async function sendData(config) {
+  const URL = 'path/to/endpoint';
+
+  try {
+    const response = await fetch(URL, config);
+    const result = await response.json();
+    if(response.status === 200) showFeedback('success');
+    else showFeedback('error');
+  } catch (err) {
+    console.log(err);
+    showFeedback('error');
+  }
+}
+
+function showFeedback(info) {
+  if(info === 'success') {
+    formFeedback.innerText = "Dziękujemy za wsparcie!";
+    formFeedback.classList.add('form__feedback--success');
+  } else {
+    formFeedback.innerText = "Wystapił błąd, spróbuj ponownie za kilka minut.";
+    formFeedback.classList.add('form__feedback--error');
+  }
+  setTimeout(() => {
+    formFeedback.className = 'form__feedback';
+  }, 4000);
+}
+
 function checkDonateForm(e) {
   e.preventDefault();
   const inputsValidation = checkInputs();
@@ -121,7 +149,16 @@ function checkDonateForm(e) {
   };
   console.log(formData);
 
-  // send data
+  const config = {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: { 'Content-Type': 'application/json' }
+  };
+
+  // sendData(config);
+  const number = Math.random();
+  if(number > 0.3) showFeedback('success');
+  else showFeedback('error');
 };
 
 const activeFormListeners = () => {
